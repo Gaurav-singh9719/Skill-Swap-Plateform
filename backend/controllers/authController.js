@@ -5,7 +5,9 @@ import User from '../models/user.models.js';
 // Register a new user
 export const register = async (req, res) => {
   try {
+    console.log(req.body)
     const { name, email, password } = req.body;
+    
 
     const existingUser = await User.findOne({ email });
     if (existingUser)
