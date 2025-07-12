@@ -1,6 +1,6 @@
 import multer from "multer";
 import { CloudinaryStorage } from "multer-storage-cloudinary";
-import cloudinary from "../../../shrijistore/backend/config/cloudinary.js";
+import cloudinary from '../config/cloudinary.js'
 
 // Set Cloudinary storage
 const storage = new CloudinaryStorage({

@@ -1,9 +1,18 @@
 import express from 'express';
-import { createSwap, getMySwaps, updateSwapStatus, deleteSwap } from '../controllers/swapController.js';
+import multer from 'multer';
+import {
+  createSwap,
+  getMySwaps,
+  updateSwapStatus,
+  deleteSwap
+} from '../controllers/swapController.js';
 import protect from '../middleware/authMiddleware.js';
-const router = express.Router();
 
-router.post('/', protect, createSwap);
+const router = express.Router();
+const upload = multer(); // no storage needed for no files
+
+// 👇 Add .none() to parse form-data fields
+router.post('/', protect, upload.none(), createSwap);
 router.get('/', protect, getMySwaps);
 router.put('/:id', protect, updateSwapStatus);
 router.delete('/:id', protect, deleteSwap);
