@@ -1,3 +1,5 @@
+https://github.com/user-attachments/assets/b794cd4f-9afa-464d-8fc6-44e2a084033a
+
 🔁 Skill Swap Platform
 A Skill Swap Platform is a mini web application that allows users to list their own skills (like programming, painting, cooking, etc.) and request to learn or exchange skills from others. This creates a collaborative, community-driven learning environment.
 
